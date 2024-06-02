@@ -1,0 +1,9 @@
+body{
+    background-color: silver;
+}
+
+.para-style{
+    color: red;
+    font-size: 3rem;
+    font-style: italic;
+}

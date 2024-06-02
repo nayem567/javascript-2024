@@ -1,0 +1,12 @@
+/* 4-13-2024 */
+body{
+    background-color: gray;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 13 - 4 - 2024 -->
+</head>
+
+<body>
+    
+    <main>
+        <button class="btn">a</button>
+        <button class="btn">b</button>
+        <button class="btn">c</button>
+    </main>
+
+    <script>
+
+        var btns = document.querySelectorAll('.btn');
+
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function () {
+                var text = this.innerHTML;
+                console.log(text);
+
+                switch (text) {
+                    case "a":
+                        var audio1 = new Audio('1.mp3');
+                        audio1.play();
+                        break;
+                    
+                    case "b":
+                        var audio2 = new Audio('2.mp3');
+                        audio2.play();
+                        break;
+
+                    case "c":
+                        var audio3 = new Audio('3.mp3');
+                        audio3.play();
+                        break;
+                }
+            });
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

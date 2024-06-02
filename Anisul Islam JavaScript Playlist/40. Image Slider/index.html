@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40. Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 13 - 4 - 2024 -->
+</head>
+
+<body>
+    <main>
+        <button id="prevId" onclick="prev()">Previous</button>
+        <img src="1.png" alt="1" height="300" width="500">
+        <button id="nextId" onclick="next()">Next</button>
+    </main>
+
+s
+    <script>
+        // images array
+        var images = ['1.png', '2.png', '3.png'];
+
+        // image selection from html
+        var imgTag = document.querySelector('img');
+
+        // starting array with count 0;
+        var count = 0;
+
+        function next() {
+            count++;
+            if (count < images.length) {
+                imgTag.src = images[count];
+            } else {
+                count = 0;
+                imgTag.src = images[count];
+            }
+        }
+        //----------------------
+        // prev function
+
+        function prev() {
+            count--;
+            if (count < 0) {
+                count = images.length - 1;
+                imgTag.src = images[count];
+            } else {
+                imgTag.src = images[count];
+            }
+        }
+
+    </script>
+</body>
+
+</html>

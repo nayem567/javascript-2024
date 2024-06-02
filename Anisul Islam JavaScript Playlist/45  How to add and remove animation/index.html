@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        .animation {
+            box-shadow: 0 15px 18px 0;
+            color: tomato;
+        }
+    </style>
+    <!-- 4-15-2024 -->
+</head>
+
+<body>
+
+    <button class="btn"> Button 1</button>
+    <button class="btn"> Button 2</button>
+    <button class="btn"> Button 3</button>
+
+
+    <script>
+        var btns = document.querySelectorAll('button');
+        console.log(btns);
+
+        // METHOD 1 - MYSELF
+        btns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                btns.forEach(btn => {
+                    // removing animation when clicked to another
+                    btn.classList.remove('animation');
+                });
+                // adding animation on clicked
+                btn.classList.add('animation');
+
+                // removing animation after 1 second
+                setTimeout(function () {
+                    btn.classList.remove('animation');
+                }, 1000);
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

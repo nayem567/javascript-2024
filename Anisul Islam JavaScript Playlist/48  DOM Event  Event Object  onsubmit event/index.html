@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- 18-4-2024 -->
+</head>
+
+<body>
+
+    <form action="">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" minlength="4" maxlength="8" required>
+        </div>
+
+        <input type="submit" name="submit" id="submit" value="Submit">
+    </form>
+
+
+    <script>
+
+        // Selection Form and Inputs
+        var form = document.querySelector("form");
+        var nameInput = form.querySelector("#name");
+        var emailInput = form.querySelector("#email");
+        var passwordInput = form.querySelector("#password");
+        var submit = form.querySelector('#submit');
+
+        // Adding "Submit" Event Listener to Form
+        form.addEventListener('submit', submitHandler);
+
+        function submitHandler(e) {
+            // preventing default behaviour of auto reloading of submit event
+            e.preventDefault();
+
+            // storing input values in an Object
+            const userInfo = {
+                name: nameInput.value,
+                email: emailInput.value,
+                password: passwordInput.value
+            }
+
+            // Printing input values on console
+            console.log(userInfo);
+
+            // clearing out input fields after form submission
+            nameInput.value = "";
+            emailInput.value = "";
+            passwordInput.value = "";
+        }
+
+        // 
+
+       
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+body{
+    background-color: gray;
+}
+button{
+    padding: 10px 20px;
+}
+.animation{
+    box-shadow: 0 15px 18px 0;
+    color: tomato;
+}
